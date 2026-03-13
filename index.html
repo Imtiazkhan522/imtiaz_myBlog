@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MyBlog – Imtiaz Khan Ifti</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = { darkMode:'class' }
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+/* Professional enhancements */
+
+body{
+font-family:'Inter',sans-serif;
+}
+
+/* NAV LINK EFFECT */
+
+nav a{
+position:relative;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#6366f1;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* CARD HOVER */
+
+article{
+transition:all .4s ease;
+}
+
+article:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 40px rgba(0,0,0,.15);
+}
+
+/* IMAGE ZOOM */
+
+article img{
+transition:transform .6s ease;
+}
+
+article:hover img{
+transform:scale(1.08);
+}
+
+/* SIDEBAR CARDS */
+
+aside div{
+transition:.35s;
+}
+
+aside div:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 35px rgba(0,0,0,.15);
+}
+
+/* SMOOTH LINKS */
+
+a{
+transition:all .25s ease;
+}
+
+</style>
+
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-950 font-inter text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen">
+
+<!-- Header -->
+<header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl shadow-sm sticky top-0 z-20 border-b border-gray-200 dark:border-gray-800">
+<div class="container mx-auto px-6 py-5 flex justify-between items-center max-w-7xl">
+
+<div>
+<h1 class="text-4xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+MyBlog
+</h1>
+
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1 tracking-wide">
+Tech • Travel • Code • Creativity
+</p>
+</div>
+
+<div class="flex items-center space-x-10">
+
+<nav class="hidden md:flex space-x-10 font-medium text-[15px]">
+
+<a href="#" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+Home
+</a>
+
+<a href="#" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+Articles
+</a>
+
+<a href="#" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+About
+</a>
+
+<a href="#" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+Contact
+</a>
+
+</nav>
+
+<button id="darkToggle" class="text-2xl hover:scale-110 transition">
+🌙
+</button>
+
+</div>
+</div>
+</header>
+
+<!-- Main -->
+<main class="container mx-auto px-6 py-16 max-w-7xl">
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+<!-- Articles -->
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+<article class="bg-white dark:bg-gray-800/90 rounded-2xl shadow-lg overflow-hidden">
+
+<img src="images/coding-night.jpg" alt="Coding at night" class="w-full h-64 object-cover">
+
+<div class="p-7">
+
+<h2 class="text-2xl font-semibold mb-3 leading-tight">
+Mastering Clean Code in 2026
+</h2>
+
+<p class="text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">
+Writing maintainable, elegant code that stands the test of time — real-world lessons.
+</p>
+
+<a href="#" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-800 inline-flex items-center">
+Read More →
+</a>
+
+</div>
+</article>
+
+
+<article class="bg-white dark:bg-gray-800/90 rounded-2xl shadow-lg overflow-hidden">
+
+<img src="images/mountain-drone.jpg" alt="Mountain drone view" class="w-full h-64 object-cover">
+
+<div class="p-7">
+
+<h2 class="text-2xl font-semibold mb-3 leading-tight">
+Exploring Remote Peaks
+</h2>
+
+<p class="text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">
+Journey through hidden trails and breathtaking views — lessons in solitude.
+</p>
+
+<a href="#" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-800 inline-flex items-center">
+Read More →
+</a>
+
+</div>
+</article>
+
+
+<article class="bg-white dark:bg-gray-800/90 rounded-2xl shadow-lg overflow-hidden">
+
+<img src="images/ai-neural.jpg" alt="AI neural network" class="w-full h-64 object-cover">
+
+<div class="p-7">
+
+<h2 class="text-2xl font-semibold mb-3 leading-tight">
+The Rise of Agentic AI
+</h2>
+
+<p class="text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">
+How autonomous AI agents are transforming development forever.
+</p>
+
+<a href="#" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-800 inline-flex items-center">
+Read More →
+</a>
+
+</div>
+</article>
+
+
+<article class="bg-white dark:bg-gray-800/90 rounded-2xl shadow-lg overflow-hidden">
+
+<img src="images/workspace-modern.jpg" alt="Modern workspace" class="w-full h-64 object-cover">
+
+<div class="p-7">
+
+<h2 class="text-2xl font-semibold mb-3 leading-tight">
+Focused Morning Routines
+</h2>
+
+<p class="text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">
+Rituals that boost creativity & productivity for coders & creators.
+</p>
+
+<a href="#" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-800 inline-flex items-center">
+Read More →
+</a>
+
+</div>
+</article>
+
+
+<article class="bg-white dark:bg-gray-800/90 rounded-2xl shadow-lg overflow-hidden">
+
+<img src="images/city-night-aerial.jpg" alt="City night skyline" class="w-full h-64 object-cover">
+
+<div class="p-7">
+
+<h2 class="text-2xl font-semibold mb-3 leading-tight">
+Urban Nights & Digital Stories
+</h2>
+
+<p class="text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">
+Capturing city energy through photos and code-inspired narratives.
+</p>
+
+<a href="#" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-800 inline-flex items-center">
+Read More →
+</a>
+
+</div>
+</article>
+
+</div>
+
+<!-- Sidebar -->
+<aside class="space-y-8 lg:sticky lg:top-24">
+
+<div class="bg-white dark:bg-gray-800/90 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+
+<h3 class="text-2xl font-bold mb-4">
+Imtiaz Khan Ifti
+</h3>
+
+<p class="text-indigo-600 dark:text-indigo-400 font-medium mb-4">
+CSE Student | Tech Enthusiast
+</p>
+
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+Passionate about programming, web development, AI, travel, and creative storytelling.
+</p>
+
+<div class="mt-6">
+
+<a href="mailto:imtiazkifti522@gmail.com" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">
+imtiazkifti522@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+<div class="bg-white dark:bg-gray-800/90 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+
+<h3 class="text-xl font-bold mb-5">
+Categories
+</h3>
+
+<ul class="space-y-3 font-medium">
+
+<li class="hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer">
+Web Development
+</li>
+
+<li class="hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer">
+Programming
+</li>
+
+<li class="hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer">
+Data & AI
+</li>
+
+<li class="hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer">
+Travel
+</li>
+
+<li class="hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer">
+Photography
+</li>
+
+<li class="hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer">
+Productivity
+</li>
+
+</ul>
+
+</div>
+
+</aside>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 py-12 mt-20 border-t border-gray-800">
+
+<div class="container mx-auto px-6 text-center max-w-7xl">
+
+<p class="text-lg">
+© 2026 MyBlog – Imtiaz Khan Ifti
+</p>
+
+<p class="text-sm mt-2 opacity-80">
+Crafted with HTML, Tailwind CSS & passion
+</p>
+
+<p class="text-sm mt-1">
+<a href="mailto:imtiazkifti522@gmail.com" class="hover:text-indigo-400">
+imtiazkifti522@gmail.com
+</a>
+</p>
+
+</div>
+</footer>
+
+<!-- Dark Mode Script -->
+<script>
+
+const toggle = document.getElementById("darkToggle");
+const html = document.documentElement;
+
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+
+html.classList.add('dark');
+toggle.textContent='☀️';
+
+}else{
+
+toggle.textContent='🌙';
+
+}
+
+toggle.addEventListener("click",()=>{
+
+if(html.classList.contains('dark')){
+
+html.classList.remove('dark');
+localStorage.theme='light';
+toggle.textContent='🌙';
+
+}else{
+
+html.classList.add('dark');
+localStorage.theme='dark';
+toggle.textContent='☀️';
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
